@@ -53,9 +53,9 @@ function Footer() {
         <div>
           <h3 style={{ fontSize: "1.2rem", marginBottom: "15px" }}>Síguenos</h3>
           <div style={{ display: "flex", gap: "15px" }}>
-            <a href="#" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>📘</a>
-            <a href="#" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>📸</a>
-            <a href="#" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>🐦</a>
+            <a href="https://google.com" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>📘</a>
+            <a href="https://google.com" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>📸</a>
+            <a href="https://google.com" style={{ color: "white", opacity: 0.8, fontSize: "1.3rem" }}>🐦</a>
           </div>
         </div>
       </div>
