@@ -33,10 +33,10 @@ function Footer() {
         <div>
           <h3 style={{ fontSize: "1.2rem", marginBottom: "15px" }}>Enlaces</h3>
           <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Inicio</a></li>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Producto</a></li>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Beneficios</a></li>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Contacto</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Inicio</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Producto</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Beneficios</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Contacto</a></li>
           </ul>
         </div>
 
@@ -44,8 +44,8 @@ function Footer() {
         <div>
           <h3 style={{ fontSize: "1.2rem", marginBottom: "15px" }}>Legal</h3>
           <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Política de privacidad</a></li>
-            <li><a href="#" style={{ color: "white", opacity: 0.7 }}>Términos y condiciones</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Política de privacidad</a></li>
+            <li><a href="https://google.com" style={{ color: "white", opacity: 0.7 }}>Términos y condiciones</a></li>
           </ul>
         </div>
 
