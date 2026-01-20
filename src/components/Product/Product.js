@@ -1,4 +1,6 @@
 import React from "react";
+import productoImg from "../../assets/smartband_bwn.png";
+
 
 function Product() {
   return (
@@ -17,14 +19,11 @@ function Product() {
     >
       {/* Imagen SmartBand */}
       <div>
-        <img
-          src="https://i.ibb.co/9VgZyLX/smartband.png"
-          alt="SmartBand Pulsetrack"
-          style={{
-            width: "280px",
-            borderRadius: "16px",
-            boxShadow: "0 0 20px rgba(0,0,0,0.4)",
-          }}
+        <img 
+  src={productoImg} 
+  alt="Producto pulsetrack" 
+  style={{ width: "300px", borderRadius: "12px" }}
+
         />
       </div>
 
