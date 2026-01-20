@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
+import emailjs from "@emailjs/browser";
+
 function Contact() {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -17,29 +17,37 @@ function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  if (!formData.nombre || !formData.email || !formData.mensaje) {
-    setStatus("Por favor completa todos los campos.");
-    return;
-  }
+    if (!formData.nombre || !formData.email || !formData.mensaje) {
+      setStatus("Por favor completa todos los campos.");
+      return;
+    }
 
-  try {
-    await addDoc(collection(db, "contactos"), {
-      nombre: formData.nombre,
-      email: formData.email,
-      mensaje: formData.mensaje,
-      fecha: serverTimestamp(),
-    });
+    const templateParams = {
+      user_name: formData.nombre,
+      user_email: formData.email,
+      message: formData.mensaje,
+    };
 
-    setStatus("¡Mensaje enviado correctamente!");
-    setFormData({ nombre: "", email: "", mensaje: "" });
-
-  } catch (error) {
-    console.error("Error al enviar mensaje: ", error);
-    setStatus("Ocurrió un error. Intenta de nuevo.");
-  }
+    emailjs
+      .send(
+        "service_yirrrtt",      // Service ID
+        "template_w799sjo",     // Template ID
+        templateParams,
+        "mp9MenfkojgyLllWc"     // Public Key
+      )
+      .then(
+        () => {
+          setStatus("¡Mensaje enviado correctamente!");
+          setFormData({ nombre: "", email: "", mensaje: "" });
+        },
+        (error) => {
+          console.error("Error al enviar:", error);
+          setStatus("Ocurrió un error. Intenta de nuevo.");
+        }
+      );
   };
 
   return (
